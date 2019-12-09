@@ -4,15 +4,15 @@ class QueenAttack
 {
     static void Main()
     {
-      Console.WriteLine("Please choose an x coordiante for your pawn between 1 and 8: ");
-      int pawnX = int.Parse(Console.ReadLine());
-      Console.WriteLine("Please Choose a y coordinate for your pawn between 1 and 8: ");
-      int pawnY = int.Parse(Console.ReadLine());
+      Console.WriteLine("Please enter pawn coordinates in this format: x:y with max 8:8 ");
+      string pawnCoords = Console.ReadLine();
+      int pawnX = int.Parse(pawnCoords.Substring(0, 1)); 
+      int pawnY = int.Parse(pawnCoords.Substring(2));
 
-      Console.WriteLine("Please choose an x coordiante for the queen between 1 and 8: ");
-      int queenX = int.Parse(Console.ReadLine());
-      Console.WriteLine("Please Choose a y coordinate for the queen between 1 and 8: ");
-      int queenY = int.Parse(Console.ReadLine());
+      Console.WriteLine("Please enter queen coordinates in this format: x:y with max 8:8 ");
+      string queenCoords = Console.ReadLine();
+      int queenX = int.Parse(queenCoords.Substring(0, 1)); 
+      int queenY = int.Parse(queenCoords.Substring(2));
 
       Console.WriteLine(checkWinner(pawnX, pawnY, queenX, queenY));
     }
